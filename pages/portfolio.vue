@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout pl-3>
     <v-timeline dense align-top clipped>
       <v-timeline-item
         v-for="(item, i) in items"
@@ -24,36 +24,12 @@
   </v-layout>
 </template>
 
-
 <script>
+  import experiences from '~/assets/experiences'
+
   export default {
     data: () => ({
-      items: [
-        {
-          title: '3f01932jf',
-          color: 'primary',
-          icon: 'mdi-star',
-          year: 'ewf'
-        },
-        {
-          title: '3f01932jf',
-          color: 'accent',
-          icon: 'mdi-book-variant',
-          year: 'ewf'
-        },
-        {
-          title: '3f01932jf',
-          color: 'success',
-          icon: 'mdi-airballoon',
-          year: 'ewf'
-        },
-        {
-          title: '3f01932jf',
-          color: 'failed',
-          icon: 'mdi-buffer',
-          year: 'ewf'
-        }
-      ]
+      items: experiences.items
     })
   }
 </script>
