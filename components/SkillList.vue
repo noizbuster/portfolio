@@ -1,38 +1,46 @@
 <template>
-  <v-card>
-    <v-card-title class="font-weight-light display-2">
-      <slot></slot>
-    </v-card-title>
-    <v-divider></v-divider>
-    <v-layout wrap>
-
-      <!--items-->
-      <!--nodejs-->
-      <v-flex v-for="(item, idx) in skills" :key="idx"
-              pt-3 flat color="whitesmoke" xs6 sm4 md3>
-        <v-card>
-          <v-img v-if="item.img" :src="item.img" height="150px" contain></v-img>
-          <v-divider></v-divider>
-          <v-card-title>
-            <div class="headline">
-              <skill-badge :level="item.level"></skill-badge>
-              {{ item.name }}
-            </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-layout wrap>
-              <tag-badge v-for="(subskill, sidx) in item.sub_skills" :key="sidx"
-                         :level="subskill.level||'basic'" small>
-                {{ subskill.name }}
-              </tag-badge>
+  <v-expansion-panel>
+    <!--TODO add button to open close all body-->
+    <v-expansion-panel-content
+      v-for="(item, idx) in skills"
+      :key="idx"
+    >
+      <!--head-->
+      <div slot="header">
+        <v-layout wrap>
+          <v-flex v-if="item.img" xs4 sm3 md2 justify-center align-center class="text-xs-center" pa-1 pr-3>
+            <v-img :src="item.img||'/skill_icons/msa.png'" class="skill_icon" contain></v-img>
+          </v-flex>
+          <v-flex xs8 sm9 md10>
+            <v-layout column fill-height justify-center>
+              <!--skill name-->
+              <v-flex>
+                <v-layout row align-center justify-center>
+                  <skill-badge :level="item.level"></skill-badge>
+                  <v-flex class="headline" pl-2>{{ item.name }}</v-flex>
+                </v-layout>
+              </v-flex>
+              <!--skill title & sub-skills-->
+              <v-flex v-if="item.sub_skills">
+                <tag-badge v-for="(subskill, si) in item.sub_skills" :key="si"
+                           :level="subskill.level" small label>
+                  {{ subskill.name }}
+                </tag-badge>
+              </v-flex>
             </v-layout>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
+          </v-flex>
+        </v-layout>
+      </div>
+      <!--body-->
+      <v-card>
+        <v-card-text>
+          <!--TODO related projects-->
+          <!--TODO description in markdown-->
+        </v-card-text>
+      </v-card>
+    </v-expansion-panel-content>
 
-    </v-layout>
-  </v-card>
+  </v-expansion-panel>
 </template>
 
 <script>
@@ -41,6 +49,15 @@
 
   export default {
     components: {TagBadge, SkillBadge},
-    props: {skills: {type: Object, default: undefined}}
+    props: {skills: {type: Object, default: undefined}},
+    data() {
+      return {show: true}
+    }
   }
 </script>
+
+<style>
+  .skill_icon {
+    height: 100px;
+  }
+</style>
