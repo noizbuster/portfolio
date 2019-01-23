@@ -17,6 +17,7 @@
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/markdownit": "^1.2.3",
     "cross-env": "^5.2.0",
+    "lodash": "^4.17.11",
     "nuxt": "^2.0.0",
     "vuetify": "^1.2.4"
   },

@@ -4,20 +4,25 @@ const backend = {
     sub_skills: [
       {name: 'express', level: 'expert'},
       {name: 'ActionHeroJS', level: 'skilled'},
-      {name: 'Winston', level: 'skilled'},
+      {name: 'winston', level: 'skilled'},
       {name: 'sequelize', level: 'skilled'},
-      {name: 'mongoose', level: 'skilled'}
+      {name: 'mongoose', level: 'skilled'},
+      {name: 'mocha/chai', level: 'skilled'}
     ]
   },
   express: {
     name: 'express', level: 'expert', img: '/skill_icons/express.png',
     sub_skills: [
-      {name: 'Replica Set', level: 'skilled'},
+      {name: 'multer', level: 'expert'}
+    ]
+  },
+  mongodb: {
+    name: 'MongoDB', level: 'skilled', img: '/skill_icons/mongodb.png',
+    sub_skills: [{name: 'Replica Set', level: 'skilled'},
       {name: 'v4.0^', level: 'skilled'},
       {name: 'ACID Transaction', level: 'skilled'}
     ]
   },
-  mongodb: {name: 'MongoDB', level: 'skilled', img: '/skill_icons/mongodb.png'},
   mysql: {name: 'MySQL(MariaDB)', level: 'skilled', img: '/skill_icons/mysql.jpg'}
 };
 
@@ -55,7 +60,8 @@ const frontend = {
     ]
   },
   bootstrap: {name: 'Bootstrap', level: 'skilled', img: '/skill_icons/bootstrap.png'},
-  android: {name: 'Android', level: 'skilled', img: '/skill_icons/android.jpg',
+  android: {
+    name: 'Android', level: 'skilled', img: '/skill_icons/android.jpg',
     sub_skills: [
       {name: 'Since Eclair', level: 'skilled'}
     ]
@@ -126,33 +132,54 @@ const hlanguage = [
 ];
 
 const comportable = {
-  msa: {
-    name: 'Micro Service Architecture', level: 'skilled', img: '/skill_icons/msa.png',
-    sub_skills: [
-      {name: 'ES 5~7', level: 'skilled'},
-      {name: 'TypeScript', level: 'skilled'},
-      {name: 'I like Lodash', level: 'skilled'}
-    ]
-  },
-  restful: {
-    name: 'RESTful API Design', level: 'skilled', img: '/skill_icons/restful.jpg',
-    sub_skills: [
-      {name: 'Replica Set', level: 'skilled'},
-      {name: 'v4.0^', level: 'skilled'},
-      {name: 'ACID Transaction', level: 'skilled'}
-    ]
-  },
   linux: {
     name: 'Linux', level: 'skilled', img: '/skill_icons/linux.png',
     sub_skills: [
       {name: 'I like Vim', level: 'skilled'},
       {name: 'I like Gnome', level: 'skilled'}
     ]
+  },
+  docker: {
+    name: 'Docker', level: 'skilled', img: '/skill_icons/docker.png',
+    sub_skills: [
+      {name: 'docker-compose', level: 'skilled'}
+    ]
+  },
+  ansible: {
+    name: 'Ansible', level: 'skilled', img: '/skill_icons/ansible.png',
+    sub_skills: []
+  },
+  git: {
+    name: 'Git', level: 'expert', img: '/skill_icons/git.png',
+    sub_skills: [
+      {name: 'prefer CLI', level: 'expert'},
+    ]
+  },
+  svn: {
+    name: 'SVN', level: 'expert', img: '/skill_icons/svn.png',
+    sub_skills: []
+  },
+};
+
+const knowledge = {
+  msa: {
+    name: 'Micro Service Architecture', level: 'skilled', img: '/skill_icons/msa.png',
+    sub_skills: []
+  },
+  restful: {
+    name: 'RESTful API Design', level: 'skilled', img: '/skill_icons/restful.jpg',
+    sub_skills: []
+  },
+  crypto: {
+    name: 'Cryptography', level: 'skilled', img: '/skill_icons/crypto.png',
+    sub_skills: [{
+      name: 'Master Degree', level: 'skilled'
+    }]
   }
 };
 
 export const skills = {
-  backend, frontend, planguage, hlanguage, comportable
+  backend, frontend, planguage, hlanguage, comportable, knowledge
 };
 
 export default {
