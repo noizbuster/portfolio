@@ -9,7 +9,7 @@
       <div slot="header">
         <v-layout wrap>
           <v-flex v-if="item.img" xs4 sm3 md2 justify-center align-center class="text-xs-center" pa-1 pr-3>
-            <v-img :src="item.img||'/skill_icons/msa.png'" class="skill_icon" contain></v-img>
+            <v-img :src="prefix + item.img||prefix + '/skill_icons/msa.png'" class="skill_icon" contain></v-img>
           </v-flex>
           <v-flex xs8 sm9 md10>
             <v-layout column fill-height justify-center>
@@ -51,7 +51,11 @@
     components: {TagBadge, SkillBadge},
     props: {skills: {type: Object, default: undefined}},
     data() {
-      return {show: true}
+      let prefix = '/portfolio';
+      if(process.env.DEPLOY_ENV !== 'GH_PAGES'){
+        prefix = '';
+      }
+      return {show: true, prefix: prefix}
     }
   }
 </script>

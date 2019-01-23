@@ -1,6 +1,12 @@
 const pkg = require('./package')
 const webpack = require('webpack')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/portfolio/'
+  }
+} : {};
+
 module.exports = {
   mode: 'spa',
 
@@ -66,7 +72,9 @@ module.exports = {
       'markdown-it-attrs'
     ]
   },
-
+  generate: {
+    dir: 'docs'
+  },
   /*
   ** Build configuration
   */
@@ -90,5 +98,6 @@ module.exports = {
         '_': 'lodash'
       })
     ]
-  }
+  },
+  ...routerBase
 }

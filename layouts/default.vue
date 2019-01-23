@@ -86,7 +86,7 @@
   }
 
   .nb-background {
-    background: linear-gradient(rgba(16, 32, 64, 0.75), rgba(16, 32, 64, 0.75)), url('/navback.jpg');
+    background: linear-gradient(rgba(16, 32, 64, 0.75), rgba(16, 32, 64, 0.75)), url('/portfolio/navback.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
