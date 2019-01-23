@@ -66,7 +66,7 @@ const frontend = {
       {name: 'Since Eclair', level: 'skilled'}
     ]
   },
-  iod: {name: 'iOS', level: 'basic', img: '/skill_icons/ios.jpg'}
+  ios: {name: 'iOS', level: 'basic', img: '/skill_icons/ios.jpg'}
 };
 
 const planguage = {

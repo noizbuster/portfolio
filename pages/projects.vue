@@ -2,12 +2,21 @@
   <v-layout wrap pa-2>
 
     <!--title-->
-    <v-flex pl-3 class="font-weight-light display-3">Projects</v-flex>
+    <v-flex xs12 pl-2 pb-4 class="font-weight-light display-3">Projects</v-flex>
 
+    <v-flex xs12 pl-2 pb-3 class="font-weight-light display-2">Company Projects</v-flex>
     <!--projects-->
     <v-flex xs12>
       <project-view
-        v-for="(project, pi) in myProjects.projects" :key="pi"
+        v-for="(project, cpi) in myProjects.company_projects" :key="cpi"
+        :project="project"
+      ></project-view>
+    </v-flex>
+
+    <v-flex xs12 pl-2 pb-3 pt-5 class="font-weight-light display-2">Personal Projects</v-flex>
+    <v-flex xs12>
+      <project-view
+        v-for="(project, ppi) in myProjects.personal_projects" :key="ppi"
         :project="project"
       ></project-view>
     </v-flex>

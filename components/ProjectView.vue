@@ -19,10 +19,10 @@
         </v-flex>
         <v-flex text-xs-right class="subheading">
           <v-layout column>
-            <v-flex>
+            <v-flex v-if="project.dev_period">
               Dev: {{ project.dev_period }}
             </v-flex>
-            <v-flex>
+            <v-flex v-if="project.service_period">
               Maintain: {{ project.service_period }}
             </v-flex>
           </v-layout>
@@ -33,12 +33,12 @@
     <!--body-->
     <v-card-text class="white text--primary">
       <!--discription: '2,475$ Advertising revenue in 6 month (2013-03-01 ~ 2013-09-23)',-->
-      <p class="subheading">{{ project.discription }}</p>
+      <pre class="subheading mb-4" style="white-space: pre-wrap; word-wrap: break-word">{{ project.discription }}</pre>
 
       <!--members-->
       <p class="subheading mb-0">Members</p>
       <p class="subheading mb-0"> Total {{ totalMember(project.members) }} member{{ totalMember(project.members)>=2?'s':'' }} team</p>
-      <v-chip v-for="(part, pi) in project.members" :key="pi"
+      <v-chip v-for="(part, pi) in project.members" :key="'member'+pi"
               :color="part.related?'success':'secondary'"
               :small="!part.related"
               class="white--text">
@@ -48,15 +48,23 @@
 
       <!--roles-->
       <p class="subheading mb-0 mt-3">My Roles</p>
-      <v-chip v-for="(role, pi) in project.role" :key="pi" color="success"
+      <v-chip v-for="(role, ri) in project.roles" :key="'role'+ri" color="success"
               class="white--text" label>
         {{ role }}
       </v-chip>
 
       <!--technologies-->
-      <p class="subheading mb-0 mt-3">Technologies</p>
+      <p class="subheading mb-0 mt-3">Main Technologies</p>
       <tag-badge
-        v-for="(tech, ti) in getSkills(project.technologies)" :key="ti"
+        v-for="(tech, ti) in getSkills(project.technologies)" :key="'tech'+ti"
+        :level="tech.level" label>
+        {{ tech.name }}
+      </tag-badge>
+
+      <!--technologies-->
+      <p class="subheading mb-0 mt-3">Base Technologies</p>
+      <tag-badge
+        v-for="(tech, bti) in getSkills(project.base_technologies)" :key="'btech'+bti"
         :level="tech.level" label>
         {{ tech.name }}
       </tag-badge>
@@ -64,7 +72,7 @@
       <!--tags-->
       <p class="subheading mb-0 mt-3">Tags</p>
       <tag-badge
-        v-for="(tag, tagi) in project.tags" :key="tagi"
+        v-for="(tag, tagi) in project.tags" :key="'tag'+tagi"
         :level="tag.level"
         label
       >{{ tag.name }}
