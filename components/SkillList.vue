@@ -52,9 +52,9 @@
     props: {skills: {type: Object, default: undefined}},
     data() {
       let prefix = '/portfolio';
-      if(process.env.DEPLOY_ENV !== 'GH_PAGES'){
-        prefix = '';
-      }
+      // if(process.env.DEPLOY_ENV !== 'GH_PAGES'){
+      //   prefix = '';
+      // }
       return {show: true, prefix: prefix}
     }
   }
