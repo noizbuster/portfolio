@@ -20,7 +20,7 @@
         <v-list router exact style="background: none">
           <v-list-tile to="/portfolio">
             <v-list-tile-content class="white--text">
-              <v-list-tile-title>PORTPOLIO</v-list-tile-title>
+              <v-list-tile-title>PORTFOLIO</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           <v-list-tile to="/projects">
