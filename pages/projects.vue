@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout wrap pa-2>
+    <v-layout wrap>
 
       <!--title-->
       <v-flex xs12 pl-2 pb-4 class="font-weight-regular display-3 primary--text">Projects</v-flex>

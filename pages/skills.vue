@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout wrap pa-2>
+    <v-layout wrap>
 
       <!--title-->
       <v-flex pl-2 class="primary--text font-weight-regular display-3">Tech. Skills</v-flex>

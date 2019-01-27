@@ -1,5 +1,5 @@
 <template>
-  <v-container pa-4>
+  <v-container>
     <v-layout row wrap justify-center align-start fill-height>
 
       <v-flex xs12>
