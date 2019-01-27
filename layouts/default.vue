@@ -47,6 +47,20 @@
       <v-toolbar-title>NoizBuster</v-toolbar-title>
     </v-toolbar>
 
+    <v-footer app color="secondary" dark style="height:5vh">
+
+      <v-layout column align-center justify-center>
+        <v-flex text-xs-center subheading>
+          <v-icon>warning</v-icon>
+          This site is currently under development (portfolio, contents)
+        </v-flex>
+        <v-flex>
+          (last updated: Sun, 27 Jan 2019 17:38:58)
+        </v-flex>
+      </v-layout>
+
+    </v-footer>
+
     <v-content>
       <v-container pa-0 fluid fill-height>
         <v-layout justify-center align-center>
