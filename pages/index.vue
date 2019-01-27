@@ -3,7 +3,7 @@
     <v-layout wrap>
       <v-flex xs12 pb-5>
         <h2 class="display-4 primary--text font-weight-bold">Wonwoo</h2>
-        <h3 class="display-3 primary--text font-weight-regular">Interest Driven Developer</h3>
+        <h3 class="display-2 primary--text font-weight-regular">A.K.A NoizBuster</h3>
         <h4 class="display-1">
           I'm a "Happy"
           <v-btn class="ma-0 pa-2 title" to="/skills" large outline color="primary">full-stack</v-btn>
@@ -21,6 +21,7 @@
           class="subheading"
           type="success"
           icon="email"
+          @click="$router.push('/contact')"
         >
           NoizBuster@noizbuster.com
         </v-alert>
