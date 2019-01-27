@@ -42,7 +42,7 @@
       </v-layout>
     </v-navigation-drawer>
 
-    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" clipped-left app fixed>
+    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" dark clipped-left app fixed color="primary">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>NoizBuster</v-toolbar-title>
     </v-toolbar>
@@ -60,7 +60,7 @@
 <script>
   export default {
     data() {
-      let base = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/portfolio/' : '';
+      let base = process.env.DEPLOY_ENV !== 'GH_PAGES' ? '' : '/portfolio/' ;
       return {
         drawer: false,
         base: base

@@ -1,27 +1,29 @@
 <template>
-  <v-layout wrap pa-2>
+  <v-container>
+    <v-layout wrap pa-2>
 
-    <!--title-->
-    <v-flex xs12 pl-2 pb-4 class="font-weight-light display-3">Projects</v-flex>
+      <!--title-->
+      <v-flex xs12 pl-2 pb-4 class="font-weight-regular display-3 primary--text">Projects</v-flex>
 
-    <v-flex xs12 pl-2 pb-3 class="font-weight-light display-2">Company Projects</v-flex>
-    <!--projects-->
-    <v-flex xs12>
-      <project-view
-        v-for="(project, cpi) in myProjects.company_projects" :key="cpi"
-        :project="project"
-      ></project-view>
-    </v-flex>
+      <v-flex xs12 pl-2 pb-3 class="font-weight-regular display-2 primary--text">Company Projects</v-flex>
+      <!--projects-->
+      <v-flex xs12>
+        <project-view
+          v-for="(project, cpi) in myProjects.company_projects" :key="cpi"
+          :project="project"
+        ></project-view>
+      </v-flex>
 
-    <v-flex xs12 pl-2 pb-3 pt-5 class="font-weight-light display-2">Personal Projects</v-flex>
-    <v-flex xs12>
-      <project-view
-        v-for="(project, ppi) in myProjects.personal_projects" :key="ppi"
-        :project="project"
-      ></project-view>
-    </v-flex>
+      <v-flex xs12 pl-2 pb-3 pt-5 class="font-weight-regular display-2 primary--text">Personal Projects</v-flex>
+      <v-flex xs12>
+        <project-view
+          v-for="(project, ppi) in myProjects.personal_projects" :key="ppi"
+          :project="project"
+        ></project-view>
+      </v-flex>
 
-  </v-layout>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
