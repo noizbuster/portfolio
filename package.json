@@ -5,7 +5,8 @@
   "author": "NoizBuster",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 5555",
+    "stage": "DEPLOY_ENV=GH_PAGES nuxt --port 5555",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
