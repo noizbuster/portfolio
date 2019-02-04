@@ -1,22 +1,16 @@
-# noizbuster-aboutme
+# noizbuster's portfolio
 
-> aboutme
+> noizbuster's portfolio
 
-## Build Setup
-
+## Running for Development
 ``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
+npm install
+npm run dev
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## Deploy to github page
+``` bash
+npm install
+npm run generate
+npm run deploy
+```
