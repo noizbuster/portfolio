@@ -155,7 +155,7 @@ const rocon_devops = {
   ],
   roles: [
     'Scripting',
-    'Development Common Modules (deploy, logging, configuration)',
+    'Development Common Modules',
     'Implement Document Building'
   ],
   technologies: [

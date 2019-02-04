@@ -33,7 +33,7 @@
     <!--body-->
     <v-card-text class="white text--primary">
       <!--discription: '2,475$ Advertising revenue in 6 month (2013-03-01 ~ 2013-09-23)',-->
-      <pre class="subheading mb-4" style="white-space: pre-wrap; word-wrap: break-word">{{ project.discription }}</pre>
+      <pre class="subheading mb-4 prewrap">{{ project.discription }}</pre>
 
       <!--members-->
       <p class="subheading mb-0">Members</p>

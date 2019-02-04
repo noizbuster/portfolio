@@ -41,7 +41,7 @@
             <v-card-text class="white text--primary">
               <p class="subheading ma-0 font-weight-bold">{{ item.position }}</p>
               <p class="caption">{{ item.period }}</p>
-              <pre> {{ item.discription }}</pre>
+              <pre class="prewrap"> {{ item.discription }}</pre>
             </v-card-text>
           </v-card>
         </v-timeline-item>

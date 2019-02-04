@@ -1,7 +1,30 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-if="drawer || !$vuetify.breakpoint.smAndDown"
-                         app clipped fixed dark permanent>
+    <!--toolbar-->
+    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" color="primary"
+               app dark clipped-left fixed>
+      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>NoizBuster</v-toolbar-title>
+    </v-toolbar>
+
+    <!--nav-->
+    <!--                         :temporary="$vuetify.breakpoint.smAndDown"
+-->
+    <v-content fluid>
+      <v-container pa-0 fill-height>
+        <v-layout justify-center align-center>
+          <nuxt/>
+        </v-layout>
+      </v-container>
+    </v-content>
+
+    <!--content-->
+    <!--style="height:100%"-->
+    <!--clipped fixed dark permanent-->
+    <v-navigation-drawer :permanent="!$vuetify.breakpoint.smAndDown"
+                         :temporary="$vuetify.breakpoint.smAndDown"
+                         v-model="drawer"
+                         app>
       <v-layout
         :style="{ 'background-image': 'linear-gradient(rgba(16, 32, 64, 0.75), rgba(16, 32, 64, 0.75)), url(' + base + '/navback.jpg' + ')' }"
         fill-height column justify-center nb-bg>
@@ -41,26 +64,13 @@
         </v-list>
       </v-layout>
     </v-navigation-drawer>
-
-    <v-toolbar v-if="$vuetify.breakpoint.smAndDown" dark clipped-left app fixed color="primary">
-      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>NoizBuster</v-toolbar-title>
-    </v-toolbar>
-
-    <v-content>
-      <v-container pa-0 fluid fill-height>
-        <v-layout justify-center align-center>
-          <nuxt/>
-        </v-layout>
-      </v-container>
-    </v-content>
   </v-app>
 </template>
 
 <script>
   export default {
     data() {
-      let base = process.env.DEPLOY_ENV !== 'GH_PAGES' ? '' : '/portfolio/' ;
+      let base = process.env.DEPLOY_ENV !== 'GH_PAGES' ? '' : '/portfolio/';
       return {
         drawer: false,
         base: base

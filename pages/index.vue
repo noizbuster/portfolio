@@ -2,9 +2,9 @@
   <v-container :pl-5="!$vuetify.breakpoint.xs" justify-left align-start>
     <v-layout wrap>
       <v-flex xs12 pb-5>
-        <h2 class="display-4 primary--text font-weight-bold">Wonwoo</h2>
-        <h3 class="display-2 primary--text font-weight-regular">A.K.A NoizBuster</h3>
-        <h4 class="display-1">
+        <h2 class="display-3 primary--text font-weight-bold">Wonwoo Yang</h2>
+        <h3 class="display-1 primary--text font-weight-regular">A.K.A NoizBuster</h3>
+        <h4 class="headline">
           I'm a "Happy"
           <v-btn class="ma-0 pa-2 title" to="/skills" large outline color="primary">full-stack</v-btn>
           developer specialized in back-end development.<br>
