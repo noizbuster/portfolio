@@ -42,13 +42,13 @@
         <v-subheader class="headline">
           Relative Project{{ item.projects.length > 1 ? 's' : '' }}
         </v-subheader>
-        <v-list-tile v-for="(p, idx) in item.projects"
+        <v-list-item v-for="(p, idx) in item.projects"
                      :key="item.name+'relative'+idx">
-          <v-list-tile-content>
-            <v-list-tile-title>{{ p.name }}</v-list-tile-title>
-            <v-list-tile-sub-title>{{ p.hint }}</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title>{{ p.name }}</v-list-item-title>
+            <v-list-item-sub-title>{{ p.hint }}</v-list-item-sub-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-expansion-panel-content>
 

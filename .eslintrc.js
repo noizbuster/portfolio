@@ -20,6 +20,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/html-self-closing': 'off',
-    'vue/html-indent': 'warn'
+    'vue/html-indent': 'warn',
+    'vue/no-unused-components': 'warn'
   }
-}
+};

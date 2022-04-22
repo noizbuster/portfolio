@@ -15,22 +15,24 @@
     "deploy": "push-dir --dir=docs --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.0.0",
-    "@nuxtjs/font-awesome": "^1.0.3",
-    "@nuxtjs/markdownit": "^1.2.3",
+    "@nuxtjs/axios": "^5.5.4",
+    "@nuxtjs/font-awesome": "^1.0.4",
+    "@nuxtjs/markdownit": "^1.2.6",
     "cross-env": "^5.2.0",
-    "lodash": "^4.17.11",
-    "nuxt": "^2.0.0",
-    "vuetify": "^1.2.4"
+    "lodash": "^4.17.15",
+    "nuxt": "^2.8.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "nodemon": "^1.11.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.1.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "nodemon": "^1.19.1",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.39.1"
   }
 }

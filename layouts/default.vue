@@ -41,26 +41,26 @@
 
         <!--menu-->
         <v-list router exact style="background: none">
-          <v-list-tile to="/portfolio">
-            <v-list-tile-content class="white--text">
-              <v-list-tile-title>PORTFOLIO</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile to="/projects">
-            <v-list-tile-content class="white--text">
-              <v-list-tile-title>PROJECTS</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile to="/skills">
-            <v-list-tile-content class="white--text">
-              <v-list-tile-title>SKILLS</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile to="/contact">
-            <v-list-tile-content class="white--text">
-              <v-list-tile-title>CONTACT ME</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+          <v-list-item to="/portfolio">
+            <v-list-item-content class="white--text">
+              <v-list-item-title>PORTFOLIO</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/projects">
+            <v-list-item-content class="white--text">
+              <v-list-item-title>PROJECTS</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/skills">
+            <v-list-item-content class="white--text">
+              <v-list-item-title>SKILLS</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/contact">
+            <v-list-item-content class="white--text">
+              <v-list-item-title>CONTACT ME</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-layout>
     </v-navigation-drawer>
